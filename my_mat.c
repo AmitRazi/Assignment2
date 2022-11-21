@@ -1,4 +1,4 @@
-#define SIZE 100
+#define SIZE 10
 void fill_matrix(int matrix[SIZE][SIZE]);
 int floyd_warshall(int matrix[SIZE][SIZE],int from,int to);
 int floyd_warshall(int matrix[SIZE][SIZE],int from,int to){
