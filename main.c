@@ -4,7 +4,7 @@
 
 int main() {
     int matrix[SIZE][SIZE];
-    int temp = 0;
+    int temp = 1;
     int flag = 0;
     int from =0,to=0;
     char ch = ' ';
