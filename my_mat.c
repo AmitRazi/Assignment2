@@ -1,8 +1,8 @@
 #include <stdio.h>
 #define SIZE 100
 int floyd_warshall(int matrix[SIZE][SIZE],int from,int to){
-    int i,j,k;
-    int dp[SIZE][SIZE];
+    int i=0,j=0,k=0;
+    int dp[SIZE][SIZE] = {0};
     for(i = 0 ; i < SIZE ; i++){
         for(j = 0 ; j < SIZE ; j++){
             dp[i][j] = matrix[i][j];
