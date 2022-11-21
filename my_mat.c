@@ -9,12 +9,7 @@ int floyd_warshall(int matrix[SIZE][SIZE],int from,int to){
             dp[i][j] = matrix[i][j];
         }
     }
-    for(i = 0 ; i < SIZE ; i++){
-        for(j = 0 ; j < SIZE ; j++){
-            printf("%d ",dp[i][j]);
-        }
-        printf("\n");
-    }
+    
     for(i = 0 ; i < SIZE ; i++){
         for(j = 0 ; j < SIZE ; j++){
             for(k = 0 ; k < SIZE ; k++){
