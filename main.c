@@ -1,5 +1,9 @@
+#include <stdio.h>
+#include "my_mat.h"
+#define SIZE 100
 int main() {
     int matrix[SIZE][SIZE];
+    int temp = 0;
     int flag = 0;
     int from =0,to=0;
     char ch = ' ';
@@ -35,6 +39,5 @@ int main() {
 
 
 
-    return 0;
-
 }
+
