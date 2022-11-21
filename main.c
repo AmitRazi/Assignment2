@@ -20,7 +20,8 @@ int main() {
                 }
                 break;
             case 'B':
-                scanf("%d%d",&from,&to);
+                scanf("%d",&from);
+                scanf("%d",&to);
                 temp = floyd_warshall(matrix,from,to);
                 if(temp!=-1)
                     printf("True\n");
@@ -28,7 +29,8 @@ int main() {
                     printf("False\n");
                 break;
             case 'C':
-                scanf("%d%d", &from,&to);
+                scanf("%d", &from);
+                scanf("%d",&to);
                 printf("%d\n",floyd_warshall(matrix,from,to));
                 break;
             case 'D':
@@ -39,7 +41,7 @@ int main() {
                 break;
         }
     }
-
-
+    printf("\n");
+    return 0;
 
 }
