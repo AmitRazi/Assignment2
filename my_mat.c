@@ -1,14 +1,20 @@
-#include <stdio.h>
 #define SIZE 100
+void fill_matrix(int matrix[SIZE][SIZE]);
+int floyd_warshall(int matrix[SIZE][SIZE],int from,int to);
 int floyd_warshall(int matrix[SIZE][SIZE],int from,int to){
-    int i=0,j=0,k=0;
-    int dp[SIZE][SIZE] = {0};
+    int i,j,k;
+    int dp[SIZE][SIZE];
     for(i = 0 ; i < SIZE ; i++){
         for(j = 0 ; j < SIZE ; j++){
             dp[i][j] = matrix[i][j];
         }
     }
-    
+    for(i = 0 ; i < SIZE ; i++){
+        for(j = 0 ; j < SIZE ; j++){
+            printf("%d ",dp[i][j]);
+        }
+        printf("\n");
+    }
     for(i = 0 ; i < SIZE ; i++){
         for(j = 0 ; j < SIZE ; j++){
             for(k = 0 ; k < SIZE ; k++){
@@ -24,4 +30,14 @@ int floyd_warshall(int matrix[SIZE][SIZE],int from,int to){
         return dp[from][to];
     }
     return -1;
+}
+
+void fill_matrix(int matrix[SIZE][SIZE]) {
+    int temp;
+    for(int i = 0 ; i < SIZE ; i++){
+        for(int j = 0 ; j < SIZE ; j++){
+        scanf("%d",&temp);
+        matrix[i][j]=temp;
+        }
+    }
 }
