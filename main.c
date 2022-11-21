@@ -37,7 +37,6 @@ int main() {
                 flag = 1;
                 break;
             default:
-                printf("Invaild input, try again");
                 break;
         }
     }
