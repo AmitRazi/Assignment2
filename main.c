@@ -36,15 +36,6 @@ int main() {
 
 
 
-}
-
-                flag = 1;
-                break;
-            default:
-                break;
-        }
-    }
-    printf("\n");
     return 0;
 
 }
