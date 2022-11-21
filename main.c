@@ -1,6 +1,5 @@
 int main() {
     int matrix[SIZE][SIZE];
-    int temp = 0;
     int flag = 0;
     int from =0,to=0;
     char ch = ' ';
