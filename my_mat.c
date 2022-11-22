@@ -1,10 +1,11 @@
 
-void fill_matrix(int matrix[SIZE][SIZE]);
-int floyd_warshall(int mat[SIZE][SIZE],int from,int to);
 #include <stdio.h>
 #include "my_mat.h"
 #define SIZE 10
 #define INF 9999
+
+void fill_matrix(int matrix[SIZE][SIZE]);
+int floyd_warshall(int mat[SIZE][SIZE],int from,int to);
 int floyd_warshall(int mat[SIZE][SIZE],int from,int to){
     if(from == to)
         return -1;
