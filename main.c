@@ -9,7 +9,7 @@ int main() {
     int temp = 0;
     int exit = 0;
     int from =0,to=0;
-    char ch = ' ';
+    char ch = 'a';
     while(!exit){
 
         scanf("%c", &ch);
