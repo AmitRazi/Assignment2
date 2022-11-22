@@ -1,30 +1,28 @@
 #define SIZE 10
+#define INF 9999
 void fill_matrix(int matrix[SIZE][SIZE]);
-int floyd_warshall(int matrix[SIZE][SIZE],int from,int to);
-int floyd_warshall(int matrix[SIZE][SIZE],int from,int to){
-    int i,j,k;
-    int dp[SIZE][SIZE];
-    for(i = 0 ; i < SIZE ; i++){
-        for(j = 0 ; j < SIZE ; j++){
-            dp[i][j] = matrix[i][j];
-        }
-    }
-    
-    for(i = 0 ; i < SIZE ; i++){
-        for(j = 0 ; j < SIZE ; j++){
-            for(k = 0 ; k < SIZE ; k++){
-                if(dp[i][k] == 0 || dp[k][j] == 0) {
-                    continue;
-                }
-                else if(dp[i][k] + dp[k][j] < dp[i][j])
-                    dp[i][j] = dp[i][k] + dp[k][j];
-            }
-        }
-    }
-    if(dp[from][to]){
-        return dp[from][to];
-    }
-    return -1;
+int floyd_warshall(int mat[SIZE][SIZE],int from,int to);
+int floyd_warshall(int mat[SIZE][SIZE],int from,int to){
+    if(from == to)
+        return -1;
+   int dp[SIZE][SIZE],i,j,k;
+   for(i = 0 ; i < SIZE ; i++){
+       for(j = 0 ; j < SIZE ; j++){
+           dp[i][j] = mat[i][j];
+       }
+   }
+   for(i = 0 ; i < SIZE ; i++){
+       for(j = 0 ; j < SIZE ; j++){
+           for(k = 0 ; k < SIZE ; k++){
+               if(dp[j][i] == 0 || dp[i][k] == 0 || i == j) continue;
+               if(dp[j][i] + dp[i][k] < dp[j][k])
+                   dp[j][k] = dp[j][i] + dp[i][k];
+           }
+       }
+   }
+   if(dp[from][to] < INF)
+       return dp[from][to];
+   return -1;
 }
 
 void fill_matrix(int matrix[SIZE][SIZE]) {
