@@ -2,7 +2,7 @@ CC=gcc
 AR=ar
 OBJECTS_MAIN=main.o
 OBJECTS_LIB=mylib.o
-FLAGS= -Wall
+FLAGS= -Wall -g
 
 all:main my_mat.a
 main: main.o my_mat.h my_mat.a
