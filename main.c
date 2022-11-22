@@ -1,13 +1,16 @@
 #include <stdio.h>
 #include "my_mat.h"
 #define SIZE 10
+
+
+
 int main() {
     int matrix[SIZE][SIZE];
     int temp = 0;
-    int flag = 0;
+    int exit = 0;
     int from =0,to=0;
     char ch = ' ';
-    while(!flag){
+    while(!exit){
 
         scanf("%c", &ch);
         switch(ch){
@@ -29,13 +32,12 @@ int main() {
                 printf("%d\n",floyd_warshall(matrix,from,to));
                 break;
             case 'D':
-                flag = 1;
+                exit = 1;
                 break;
             default:
                 break;
         }
     }
-    printf("\n");
 
 
 
