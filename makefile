@@ -4,8 +4,8 @@ OBJECTS_MAIN=main.o
 OBJECTS_LIB=mylib.o
 FLAGS= -Wall -g
 
-all:main my_mat.a
-main: main.o my_mat.h my_mat.a
+all:connections my_mat.a
+connections: main.o my_mat.h my_mat.a
 	$(CC) $(FLAGS) -o main main.o my_mat.a -lm
 main.o: main.c
 	$(CC) $(FLAGS) -c main.c
