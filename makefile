@@ -6,7 +6,7 @@ FLAGS= -Wall -g
 
 all:connections my_mat.a
 connections: main.o my_mat.h my_mat.a
-	$(CC) $(FLAGS) -o main main.o my_mat.a -lm
+	$(CC) $(FLAGS) -o connections main.o my_mat.a -lm
 main.o: main.c
 	$(CC) $(FLAGS) -c main.c
 my_mat.a: my_mat.o
