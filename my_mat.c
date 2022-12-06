@@ -18,7 +18,7 @@ int floyd_warshall(int mat[SIZE][SIZE],int from,int to){
     for(i = 0 ; i < SIZE ; i++){
         for(j = 0 ; j < SIZE ; j++){
             for(k = 0 ; k < SIZE ; k++){
-                if(dp[j][i] == 0 || dp[i][k] == 0 || i == j) continue;
+                if(dp[j][i] == INF || dp[i][k] == INF || i == j) continue;
                 if(dp[j][i] + dp[i][k] < dp[j][k])
                     dp[j][k] = dp[j][i] + dp[i][k];
             }
