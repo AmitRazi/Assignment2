@@ -13,3 +13,6 @@ my_mat.a: my_mat.o
 	$(AR) -rcs my_mat.a my_mat.o
 my_mat.o: my_mat.c
 	$(CC) $(FLAGS) -c my_mat.c
+.PHONY: clean all connections
+clean:
+	rm -f *.o *.a connections
