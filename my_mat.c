@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "my_mat.h"
 #define SIZE 10
-#define INF 9999 //Indicates the absent of an edge
+#define INF 999999 //Indicates the absent of an edge
 
 void fill_matrix(int matrix[SIZE][SIZE]);
 int floyd_warshall(int mat[SIZE][SIZE],int from,int to);
